@@ -3,10 +3,12 @@ from vista.VentanaCuestionario import  VentanaCuestionario
 o
 class Conexion:
     def __init__(self):
-        self.nuevoInvernadero="+"
+        self.nery=NERY()
 
     def registrarInventario(self,datoInvernadero):
-        self.nuevoInvernadero=Invernadero()
-        self.nuevoInvernadero.setNombre(datoInvernadero[0])
-        self.objInvernadero.agregarInvernadero(nuevoInvernadero)
+        self.nuevoInvernadero=Invernadero(*datoInvernadero)
+        self.nery.guardarInvernadero(nuevoInvernadero)
+        
+        #self.nuevoInvernadero.setNombre(datoInvernadero[0])
+        #self.objInvernadero.agregarInvernadero(nuevoInvernadero)
         
