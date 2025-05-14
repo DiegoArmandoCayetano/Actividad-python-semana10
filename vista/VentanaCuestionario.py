@@ -7,6 +7,7 @@ class VentanaCuestionario:
         self.master.title("Registrar Invernadero")
         self.master.attributes('-fullscreen', True)  # Hacer la ventana en pantalla completa
         self.master.configure(bg="white")
+        self.btn_guardar.config(comand=self.guardarDatos)
 
         # Parte superior verde
         self.top_frame = tk.Frame(self.master, bg="#74b74b", height=100)
@@ -88,3 +89,16 @@ class VentanaCuestionario:
         rootVentanaPrincipal = tk.Tk()
         vista.VentanaPrincipal.VentanaPrincipal(rootVentanaPrincipal)  # uso completo del nombre del módulo
         rootVentanaPrincipal.mainloop()
+
+    def guardarDatos(self):
+        datos=[
+        self.entry_nombre.get(),
+        self.entry_capacidad.get(),
+        self.combo_cultivo.get(),
+        self.entry_fecha.get(),
+        self.entry_responsable.get(),
+        self.entry_capacidad.get(),
+        self.combo_riego.get()
+        ]
+        conexion= Conexion()
+        conexion.registrarInvernadero(datos)
