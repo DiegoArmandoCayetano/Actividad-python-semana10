@@ -1,6 +1,6 @@
 from modelo.Invernadero import Invernadero
 from vista.VentanaCuestionario import  VentanaCuestionario
-o
+
 class Conexion:
     def __init__(self):
         self.nery=NERY()
