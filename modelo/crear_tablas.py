@@ -1,5 +1,5 @@
 # modelo/crear_tablas.py
-from modelo.conexion import conectar
+from controlador.conexion_base_datos import conectar
 
 def crear_tablas():
     con = conectar()
