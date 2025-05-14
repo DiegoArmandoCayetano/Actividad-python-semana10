@@ -1,4 +1,4 @@
-from modelo.Conexion import crear_tablas
+from controlador.Conexion import crear_tablas
 import tkinter as tk
 from vista.VentanaInicio import VentanaInicio
 
