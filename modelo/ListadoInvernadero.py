@@ -12,5 +12,5 @@ class NERY:
     def eliminarInvernadero(self,dato):
         self.listaInvernadero.remove(dato)
 
-    def listarInvernadero(self):
+    def listarInvernaderos(self):
         return self.listaInvernadero
