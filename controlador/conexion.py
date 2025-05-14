@@ -11,4 +11,6 @@ class Conexion:
         
         #self.nuevoInvernadero.setNombre(datoInvernadero[0])
         #self.objInvernadero.agregarInvernadero(nuevoInvernadero)
-        
+
+    def obtenerInvernaderos(self):
+        return self.nery.listarInvernaderos()
