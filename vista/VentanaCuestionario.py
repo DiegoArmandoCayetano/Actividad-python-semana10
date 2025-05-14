@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+import vista.VentanaVerInvernaderos from VentanaVerInvernaderos
 
 class VentanaCuestionario:
     def __init__(self, master):
@@ -81,6 +82,16 @@ class VentanaCuestionario:
 
         self.btn_confirmar = tk.Button(self.master, text="REGRESAR", bg="#74b74b", fg="white", width=25, height=1, command=self.abrirVentanaPrincipal)
         self.btn_confirmar.pack(pady=20)
+
+        self.btn_ver = tk.Button(self.frame, text="Ver Invernaderos", bg="blue", fg="white", command=self.abrir_lista_invernaderos)
+        self.btn_ver.grid(row=9, column=0, pady=10)
+
+    
+    def abrir_lista_invernaderos(self):
+        from vista.VentanaVerInvernaderos import VentanaVerInvernaderos
+        nueva_ventana = tk.Toplevel(self.master)
+        VentanaVerInvernaderos(nueva_ventana)
+
 
     def abrirVentanaPrincipal(self):
         # ✅ Importación local con acceso por módulo (evita ImportError por ciclo)
