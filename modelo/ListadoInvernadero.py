@@ -1,13 +1,16 @@
 from modelo.Invernadero import Invernadero
+from controlador.conexion import Conexion
 class NERY:
     pass
 
     def __init__(self):
-        self=listaInvernadero= []
+        self.listaInvernadero= []
 
     def guardarInvernadero(self,objInvernadero):
         self.listaInvernadero.append(objInvernadero)
 
     def eliminarInvernadero(self,dato):
         self.listaInvernadero.remove(dato)
-    #
+
+    def listarInvernadero(self):
+        return self.listaInvernadero
